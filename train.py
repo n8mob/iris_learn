@@ -3,7 +3,7 @@ from sklearn.linear_model import LogisticRegression
 import joblib
 
 # load built-in dataset
-X, y = load_ires(return_X_y=True)
+X, y = load_iris(return_X_y=True)
 
 # train a simple model
 model = LogisticRegression(max_iter=200)
