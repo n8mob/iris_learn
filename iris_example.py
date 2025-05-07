@@ -4,8 +4,8 @@ import pickle
 #modelop.init
 def begin():
     # load the trained model
-    pickle.
-    global iris_model = pickle.load(open('iris_model.pkl', 'rb'))
+    with open('iris_model.pkl', 'rb') as pickeled_model:
+        global iris_model = pickle.load(pickled_model)
 
 
 #modelop.score    
