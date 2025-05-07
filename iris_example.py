@@ -6,7 +6,7 @@ def begin():
     global pickled_model
     # load the trained model
     with open('iris_model.pkl', 'rb') as pickeled_file:
-        pickled_model = joblib.load(pickled_file)
+        pickled_model = joblib.load(pickeled_file)
 
 
 #modelop.score    
