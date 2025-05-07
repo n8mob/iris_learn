@@ -1,11 +1,12 @@
-import pickle
+import joblib
 
 
 #modelop.init
 def begin():
+    global iris_model
     # load the trained model
     with open('iris_model.pkl', 'rb') as pickeled_model:
-        global iris_model = pickle.load(pickled_model)
+        iris_model = joblib.load(pickled_model)
 
 
 #modelop.score    
