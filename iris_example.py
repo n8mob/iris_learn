@@ -5,14 +5,14 @@ import joblib
 def begin():
     global pickled_model
     # load the trained model
-    with open('iris_model.pkl', 'rb') as pickeled_model:
-        iris_model = joblib.load(pickled_model)
+    with open('iris_model.pkl', 'rb') as pickeled_file:
+        pickled_model = joblib.load(pickled_file)
 
 
 #modelop.score    
 def action(data):
     print("I'm in your models, predicting your data.")
-    yield iris_model.predict(data)
+    yield pickled_model.predict(data)
 
 
 #modelop.metrics
