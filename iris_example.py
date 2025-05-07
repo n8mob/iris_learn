@@ -3,7 +3,7 @@ import joblib
 
 #modelop.init
 def begin():
-    global iris_model
+    global pickled_model
     # load the trained model
     with open('iris_model.pkl', 'rb') as pickeled_model:
         iris_model = joblib.load(pickled_model)
