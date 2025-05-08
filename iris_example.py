@@ -12,7 +12,7 @@ def begin():
 #modelop.score    
 def action(data):
     floated = [float(i) for i in data]
-    yield bytes(pickled_model.predict([floated])[0])
+    yield str(pickled_model.predict([floated])[0]).encode('utf-8')
 
 
 #modelop.metrics
