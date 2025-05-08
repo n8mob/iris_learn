@@ -11,8 +11,8 @@ def begin():
 
 #modelop.score    
 def action(data):
-    print("I'm in your models, predicting your data.")
-    yield pickled_model.predict(data)
+    floated = [float(i) for i in data]
+    yield pickled_model.predict([floated])
 
 
 #modelop.metrics
