@@ -5,11 +5,11 @@ import joblib
 def begin(model_def = None):
     if model_def:
         if 'rawJson' in model_def:
-          print(model_def['rawJson'])
+          print(f"found rawJson in model_def: {model_def['rawJson']}")
         if 'job' in model_def:
-          print(model_def['job'])
+          print(f"found job in model_def: {model_def['job']}")
         if 'deployedModel' in model_def:
-          print(model_def['deployedModel'])
+          print(f"found deployedModel in model_def: {model_def['deployedModel']}")
 
     global pickled_model
     # load the trained model
@@ -17,7 +17,7 @@ def begin(model_def = None):
         pickled_model = joblib.load(pickeled_file)
 
 
-#modelop.score    
+#modelop.score
 def action(data):
     floated = [float(i) for i in data]
     yield str(pickled_model.predict([floated])[0]).encode('utf-8')
