@@ -2,15 +2,7 @@ import joblib
 
 
 #modelop.init
-def begin(model_def = None):
-    if model_def:
-        if 'rawJson' in model_def:
-          print(f"found rawJson in model_def: {model_def['rawJson']}")
-        if 'job' in model_def:
-          print(f"found job in model_def: {model_def['job']}")
-        if 'deployedModel' in model_def:
-          print(f"found deployedModel in model_def: {model_def['deployedModel']}")
-
+def begin():
     global pickled_model
     # load the trained model
     with open('iris_model.pkl', 'rb') as pickeled_file:
